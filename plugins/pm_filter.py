@@ -740,8 +740,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
-
+        
     elif query.data == "start":
+        buttons = [[
+                    InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴꜱ', callback_data="more")
+                  ]]
+
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id, 
+            query.message.id, 
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.START_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+        await query.answer(MSG_ALRT)
+        
+    elif query.data == "more":
         buttons = [[
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
@@ -751,7 +769,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help2'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
-            InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+rA4tZ-tS7BFhYzU9')
+            InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+rA4tZ-tS7BFhYzU9'),
+            ],[
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data="start")
          ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
