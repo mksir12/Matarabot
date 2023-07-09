@@ -467,7 +467,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🔥 ᴄʜᴀɴɴᴇʟ 🔥", url=(MAIN_CHANNEL))
+                            InlineKeyboardButton("🔥 ᴄʜᴀɴɴᴇʟ 🔥", url='https://t.me/+rA4tZ-tS7BFhYzU9')
                         ]
                     ]
                 )
@@ -497,7 +497,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup(
                             [
                                 [
-                                    InlineKeyboardButton("🔥 ᴄʜᴀɴɴᴇʟ 🔥", url=(MAIN_CHANNEL))
+                                    InlineKeyboardButton("🔥 ᴄʜᴀɴɴᴇʟ 🔥", url='https://t.me/+rA4tZ-tS7BFhYzU9')
                                 ]
                             ]
                         )
@@ -746,12 +746,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('× ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ×', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 sᴇᴀʀᴄʜ', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('ᴏᴡɴ ɪɴғᴏ', url='https://t.me/TGxMATRIX')
+            InlineKeyboardButton('ᴏᴡɴ ɪɴғᴏ', url='https://t.me/dhoni_707')
             ],[
             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help2'),
             InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about')
             ],[
-            InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+ax8qz38HZhU1NGE1')
+            InlineKeyboardButton('Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/+rA4tZ-tS7BFhYzU9')
          ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
         await client.edit_message_media(
@@ -844,7 +844,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', callback_data='updates'),
-            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com/matrixbotz0/PETER-PARKER-BOT'),
+            InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/+rA4tZ-tS7BFhYzU9'),
         ],[
             InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
@@ -862,8 +862,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "updates":
         buttons = [[
-            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/MLZ_BOTZ_SUPPORT'),
-            InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/MLZ_BOTZ')
+            InlineKeyboardButton('𝚂𝚄𝙿𝙿𝙾𝚁𝚃', url='https://t.me/+rA4tZ-tS7BFhYzU9'),
+            InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url='https://t.me/+rA4tZ-tS7BFhYzU9')
             ],[
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='about')
         ]]
@@ -1053,8 +1053,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "deploy":
         buttons = [[
-           InlineKeyboardButton('ʀᴇᴘᴏ', url='https://github.com/matrixbotz0/PETER-PARKER-BOT'),
-           InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/TGxMATRIX')
+           InlineKeyboardButton('ʀᴇᴘᴏ', url='htts://t.me/nibrasbadusha'),
+           InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/dhoni_707')
         ], [
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='help')
         ]]
