@@ -1170,16 +1170,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='more'),
             InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        a = await message.reply_text(
+        await query.message.edit_text(
             text="● ◌ ◌"
         )
-        await asyncio.sleep(0.2)
-        b = await a.edit(
+        await query.message.edit_text(
             text="● ● ◌"
         )
-        await asyncio.sleep(0.2)
-        c = await b.edit(
+        await query.message.edit_text(
             text="● ● ●"
         )
         await client.edit_message_media(
@@ -1187,6 +1184,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
+        reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = 7018
         chats = await db.total_chat_count()
@@ -1205,16 +1203,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='stats'),
             InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
-        reply_markup = InlineKeyboardMarkup(buttons)
-        a = await message.reply_text(
+        await query.message.edit_text(
             text="● ◌ ◌"
         )
-        await asyncio.sleep(0.2)
-        b = await a.edit(
+        await query.message.edit_text(
             text="● ● ◌"
         )
-        await asyncio.sleep(0.2)
-        c = await b.edit(
+        await query.message.edit_text(
             text="● ● ●"
         )
         await client.edit_message_media(
@@ -1222,6 +1217,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
+        reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = 7018
         chats = await db.total_chat_count()
