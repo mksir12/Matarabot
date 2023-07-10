@@ -196,7 +196,7 @@ async def start(client, message):
         chat_id=message.from_user.id,
         file_id=file_id,
         caption=f_caption,
-        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('❤️‍🔥 ᴊᴏɪɴ ᴛᴏ ᴄʜᴀɴɴᴇʟ ❤️‍🔥', url='https://t.me/+rA4tZ-tS7BFhYzU9')) ] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('❤️‍🔥 ᴊᴏɪɴ ᴛᴏ ᴄʜᴀɴɴᴇʟ ❤️‍🔥', url='https://t.me/+rA4tZ-tS7BFhYzU9') ] ] ),
         protect_content=True if pre == 'filep' else False,
         )
                     
