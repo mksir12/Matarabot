@@ -23,10 +23,21 @@ BATCH_FILES = {}
 async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
-                    InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴꜱ', callback_data="more")
+                    InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ 👀 ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴꜱ', callback_data="more")
                   ]]  
         
         reply_markup = InlineKeyboardMarkup(buttons)
+        a = await message.reply_text(
+            text="● ◌ ◌"
+        )
+        await asyncio.sleep(0.2)
+        b = await a.edit(
+            text="● ● ◌"
+        )
+        await asyncio.sleep(0.2)
+        c = await b.edit(
+            text="● ● ●"
+        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
@@ -51,6 +62,17 @@ async def start(client, message):
                     InlineKeyboardButton('ᴄʟɪᴄᴋ ʜᴇʀᴇ ꜰᴏʀ ᴍᴏʀᴇ ʙᴜᴛᴛᴏɴꜱ', callback_data="more")
                   ]]
         reply_markup = InlineKeyboardMarkup(buttons)
+        a = await message.reply_text(
+            text="● ◌ ◌"
+        )
+        await asyncio.sleep(0.2)
+        b = await a.edit(
+            text="● ● ◌"
+        )
+        await asyncio.sleep(0.2)
+        c = await b.edit(
+            text="● ● ●"
+        )
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
