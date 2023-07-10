@@ -794,7 +794,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct'),
             InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅꜱ', callback_data='extra')   
             ],[
-            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='more'),
             InlineKeyboardButton('Sᴛᴀᴛᴜꜱ', callback_data='stats')
          ]] 
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -836,7 +836,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ],[
             InlineKeyboardButton('ᴄᴏᴜɴᴛʀʏ', callback_data='country'),
             InlineKeyboardButton('ᴅᴇᴘʟᴏʏ', callback_data='deploy'),
-            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start')
+            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='more')
             ],[
             InlineKeyboardButton('↭ ʙᴀᴄᴋ ᴛᴏ ʜᴏᴍᴇ ​↭', callback_data='help2')
          ]]
@@ -865,7 +865,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂', callback_data='updates'),
             InlineKeyboardButton('ʀᴇᴘᴏ', url='https://t.me/+rA4tZ-tS7BFhYzU9'),
         ],[
-            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('ʜᴏᴍᴇ', callback_data='more'),
             InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1167,15 +1167,26 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "stats":
         buttons = [[
-            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='start'),
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='more'),
             InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        a = await message.reply_text(
+            text="● ◌ ◌"
+        )
+        await asyncio.sleep(0.2)
+        b = await a.edit(
+            text="● ● ◌"
+        )
+        await asyncio.sleep(0.2)
+        c = await b.edit(
+            text="● ● ●"
+        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
-        reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = 7018
         chats = await db.total_chat_count()
@@ -1194,12 +1205,23 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='stats'),
             InlineKeyboardButton('ʀᴇғʀᴇsʜ', callback_data='rfrsh')
         ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        a = await message.reply_text(
+            text="● ◌ ◌"
+        )
+        await asyncio.sleep(0.2)
+        b = await a.edit(
+            text="● ● ◌"
+        )
+        await asyncio.sleep(0.2)
+        c = await b.edit(
+            text="● ● ●"
+        )
         await client.edit_message_media(
             query.message.chat.id, 
             query.message.id, 
             InputMediaPhoto(random.choice(PICS))
         )
-        reply_markup = InlineKeyboardMarkup(buttons)
         total = await Media.count_documents()
         users = 7018
         chats = await db.total_chat_count()
