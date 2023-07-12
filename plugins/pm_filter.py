@@ -671,7 +671,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 '_id': file_ids,
             })
             if result.deleted_count:
-           logger.info('HD-TS File Found ! Successfully deleted from database.')
+                logger.info('HD-TS File Found ! Successfully deleted from database.')
             deleted+=1
         deleted = str(deleted)
         await k.edit_text(text=f"<b>Sᴜᴄᴄᴇssғᴜʟʟʏ Dᴇʟᴇᴛᴇᴅ {deleted} HD-TS Fɪʟᴇs.</b>")
