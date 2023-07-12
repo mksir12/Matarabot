@@ -52,9 +52,8 @@ async def start(client, message):
         c = await b.edit(
             text="● ● ●"
         )
-        m=await message.reply_sticker("CAACAgIAAxkBAAKKAAFkHAda7cEwnGhLkERsPowfgFFD2wACVBYAAtB7QUn8uVjZ80ZWKB4E") 
-        await asyncio.sleep(1)
-        await m.delete()        
+        await asyncio.sleep(0.6)
+        await c.delete()        
         await message.reply_photo(
             photo=random.choice(PICS),
             caption=script.MORE_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
