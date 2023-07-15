@@ -9,7 +9,7 @@ from pyrogram.types import *
 
 #BOT FILE IMPORTS
 #Name -> Your Bots File Name (Eg. From Liaa import pbot as app)
-from info import pbot as app
+from pyrogram import Client as app
 
 
 #AI IMAGE GENERATION FUNCTION
