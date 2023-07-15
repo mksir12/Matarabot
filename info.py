@@ -110,7 +110,7 @@ NO_RESULTS_CHANNEL = int(environ.get("NO_RESULTS_CHANNEL", "-1001615904511"))
 
 # Others
 
-pbot = Client(api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client(api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 NO_RESULTS_MSG = is_enabled((environ.get('NO_RESULTS_MSG', "True")), True)
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
